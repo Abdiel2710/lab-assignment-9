@@ -11,13 +11,14 @@ struct RecordType
 // Fill out this structure
 struct HashType
 {
-
+	struct RecordType *record; // create a pointer to a RecordType
 };
 
 // Compute the hash function
 int hash(int x)
 {
-
+	// hash function is x % tableSize
+    	return x % tableSize;
 }
 
 // parses input file to an integer array
